@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sangamone | Selenium Testig website |</title>
+	<style>
+		li{
+			font-size: 26px;
+		}
+
+		*{
+			font-family: "Consolas";
+		}
+
+		input{
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Selenium testing website</h1>
+	<hr>
+	<input id="search1" onkeyup="search1()" placeholder="Search for a fruit..">
+	<ul>
+		<li>apple</li>
+		<li>banana</li>
+		<li>orange</li>
+		<li>pineapple</li>
+		<li>pomegranate</li>
+		<li>peach</li>
+		<li>apricots</li>
+		<li>watermelon</li>
+		<li>avacado</li>
+		<li>strawberries</li>
+	</ul>
+	<script type="text/javascript">
+		function search1(){
+			let list1 = document.getElementsByTagName("li");
+			let user_search1 = document.getElementById('search1').value.toLowerCase();
+			for(let i = 0; i<list1.length; i++){
+				let temp1 = list1[i].innerHTML;
+				if(temp1.startsWith(user_search1.at(0))){
+					list1[i].style.display = "";
+				}else{
+					list1[i].style.display = "none";
+				}
+
+				if(user_search1 == ""){
+					list1[i].style.display = "";
+				}
+			}
+		}
+	</script>	
+</body>
+</html>
