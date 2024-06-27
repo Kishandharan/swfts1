@@ -40,7 +40,7 @@
 			let user_search1 = document.getElementById('search1').value.toLowerCase();
 			for(let i = 0; i<list1.length; i++){
 				let temp1 = list1[i].innerHTML;
-				if(temp1.startsWith(user_search1.at(0))){
+				if(temp1.includes(user_search1)){
 					list1[i].style.display = "";
 				}else{
 					list1[i].style.display = "none";
