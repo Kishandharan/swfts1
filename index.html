@@ -17,8 +17,13 @@
 			font-size: 20px;
 		}
 
-		button{
+		.btn{
 			font-size: large;
+		}
+
+		.btn:hover{
+			background-color: darkblue;
+			color: white;
 		}
 
 		.dropdown{
@@ -46,7 +51,7 @@
 	<h1>Selenium testing website</h1>
 	<hr>
 	<input id="search1" name="search-inp" placeholder="Search for a fruit..">
-	<button onclick="search1()" name="search-btn">Search</button>
+	<button onclick="search1()" name="search-btn" class="btn1">Search</button>
 	<ul>
 		<li>apple</li>
 		<li>banana</li>
