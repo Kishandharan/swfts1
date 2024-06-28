@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>FruitsJunction | Search for fruits</title>
+	<title>FruitsJunction | Search for fruits |</title>
 	<style>
 		li{
 			font-size: 26px;
@@ -16,12 +16,37 @@
 		input{
 			font-size: 20px;
 		}
+
+		button{
+			font-size: large;
+		}
+
+		.dropdown{
+			font-size: 25px;
+			overflow: hidden;
+			background-color: #010445;
+			display: inline-block;
+			padding: 10px;
+			height: 30px;
+			text-align: center;
+			transition: 1s ease;
+			color: white;
+		}
+
+		.dropdown:hover{
+			height: 150px;
+		}
+
+		a{
+			color: white;
+		}
 	</style>
 </head>
 <body>
 	<h1>Selenium testing website</h1>
 	<hr>
-	<input id="search1" onkeyup="search1()" placeholder="Search for a fruit..">
+	<input id="search1" placeholder="Search for a fruit..">
+	<button onclick="search1()">Search</button>
 	<ul>
 		<li>apple</li>
 		<li>banana</li>
@@ -34,6 +59,13 @@
 		<li>avacado</li>
 		<li>strawberries</li>
 	</ul>
+	<div class="dropdown">
+		Links<br><br>
+
+		<a href="page1.html" name="link1">Goto page1</a><br>
+		<a href="page2.html" name="link2">Goto page2</a><br>
+		<a href="page3.html" name="link3">Goto page3</a><br>	
+	</div>
 	<script type="text/javascript">
 		function search1(){
 			let list1 = document.getElementsByTagName("li");
